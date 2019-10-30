@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     @IBAction func playAgain(_ sender: UIButton) {
         display.backgroundColor = colorChoise.randomiser()
         score = 0
-        status.text = "Guess what color is the most dominant"
+        status.text = "Guess what color is the most dominant?"
     }
     
     @IBAction func colorChange(_ sender: UIButton) {
