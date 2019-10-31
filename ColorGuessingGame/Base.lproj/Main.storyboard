@@ -61,13 +61,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsR-tX-akC">
-                                <rect key="frame" x="161" y="583" width="71" height="30"/>
+                                <rect key="frame" x="172" y="584" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play Again"/>
                                 <connections>
                                     <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wqe-In-XuI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highest score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeC-Oj-8QS">
+                                <rect key="frame" x="112" y="660" width="190" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLV-hT-h2P">
+                                <rect key="frame" x="175" y="631" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -76,13 +90,15 @@
                         <outlet property="blueButton" destination="YJj-lS-GTV" id="xyW-Lw-rYl"/>
                         <outlet property="display" destination="LIU-kc-wwT" id="3WV-qA-NrH"/>
                         <outlet property="greenButton" destination="DZ1-Gt-EUX" id="GFJ-5w-2Lk"/>
+                        <outlet property="highestScore" destination="KeC-Oj-8QS" id="WMp-AI-fg8"/>
                         <outlet property="redButton" destination="D8U-HT-AVA" id="gdE-M1-rDX"/>
+                        <outlet property="score" destination="OLV-hT-h2P" id="j2i-zM-zeR"/>
                         <outlet property="status" destination="Ici-qq-VQa" id="mAE-cd-Wnu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="576.81159420289862" y="71.651785714285708"/>
+            <point key="canvasLocation" x="302.89855072463769" y="22.767857142857142"/>
         </scene>
     </scenes>
 </document>

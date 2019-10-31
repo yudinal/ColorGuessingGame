@@ -8,8 +8,6 @@
 
 import UIKit
 
-var highScore = 0
-
 
 class ViewController: UIViewController {
 
@@ -18,8 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var highestScore: UILabel!
+    @IBOutlet var score: UILabel!
     
-    var score: Int = 0
+    var currentScore = 0
+    var currentHighScore = 0
     let colorChoise = ChooseColor()
     
     override func viewDidLoad() {
@@ -32,19 +33,25 @@ class ViewController: UIViewController {
     
     @IBAction func playAgain(_ sender: UIButton) {
         display.backgroundColor = colorChoise.randomiser()
-        score = 0
+        currentScore = 0
         status.text = "Guess what color is the most dominant?"
+        score.text = "Score: \(currentScore)"
     }
     
     @IBAction func colorChange(_ sender: UIButton) {
         guard let randomColor = display.backgroundColor else { return }
         
+        if currentScore >= currentHighScore {
+            currentHighScore = currentScore
+            highestScore.text = "Highest score is \(currentHighScore)"
+        }
+        
         if sender.backgroundColor == colorChoise.rgba(color: randomColor) {
-            score += 1
-            status.text = "CORRECT👍🏻 Your score is \(score)"
+            currentScore += 1
+            status.text = "CORRECT👍🏻 Your score is \(currentScore)"
+            score.text = "Score: \(currentScore)"
         } else {
             status.text = "WRONG👎🏻 Wanna play again?"
-           score = 0
         }
         display.backgroundColor = colorChoise.randomiser()
     }
